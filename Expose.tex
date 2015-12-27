@@ -15,6 +15,17 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{amstext}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[R]{\leftmark}
+\fancyhead[L]{\rightmark}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{15pt}
+
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+
 
 \begin{document}
 
@@ -45,6 +56,7 @@
 Um die L\"ucke zwischen Managemnet und IT zu schließen, setzen Unternehmen seit Jahren eine Vielfallt an Werkzeugen und Notationen f\"ur die Modelierung von Gesch\"aftsprozessen ein. Das heißt, dass die Gesch\"aftprozessen formal definiert werden m\"ussen, um sie zu dokumentieren, verstehen, automatisieren und verbessern. [1] Denn die Unternehmen nehmen großen Wert dran, ihre Geschäftsabl\"aufe zu automatisieren, weil dadurch viel Zeit und Kosten gespart werden kann, wird die Frage h\"aufig gestellt, mit welchen Werkzeugen diese Realisierung ermöglicht ist.\newline
 Eine von der h\"aufig benutzten Notationen ist BPMN und die modellierten Prozessen mit BPMN lassen sich durch Camunda BPM automatisieren. Camunda BPM ist eine gute Wahl, weil dadurch Prozess-Kosten sich verringern, Prozess-Durchläufe sich beschleunigen, in vorhandener IT eibettbar ist, abh\"angig von keiner Hersteller ist, keine speziellen Entwickler ben\"otigt und viel mehr. [2]
 
+\newpage
 
 \section{Zielsetzung und Grenzen}
 
@@ -63,6 +75,8 @@ Hauptnutzer der Anwendung werden die Mitarbeiter von Crowdcode sein. .....
 \subsection{Abgrenzungen}
 
 eine vollständige Analyse, Modellierung und Umsetzung von Abrechnungsprozessen kann nicht im Rahmen dieser Arbeit erfüllbar sein.
+
+\newpage
 
 \section{Gliederung}
 
@@ -94,16 +108,12 @@ Die Gliederung kann im Laufe der Arbeit ge\"andert werden.
    \end{itemize}
 	\end{description}
 	
+	\newpage
+	
 	\section{Vorgehen}
 	
 	Die Arbeit beinhaltet ...Abschnitte. ZUerst wird... Danach... Zum Schluss
 	
-	\section{Herausforderung}
-	
-	
-	\section{Zeitplan}
-	
-	ob es n\"otig ist!
 	
 \begin{thebibliography}{3}
 
