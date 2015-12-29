@@ -1,0 +1,127 @@
+%Dokumentenklasse, andere Beispiele: Statt llncs "`article"' "`report"', "`book"'...
+%Achtung llncs benötigt die Datei llncs.cls im gleichen Ordner
+\documentclass[runningheads]{llncs}
+
+%sorgt für deutsche Übersetzungen, z.B. "`Literatur"' statt "`References"'
+\usepackage{ngerman}
+%Ermöglicht das Einbinden von Bildern
+\usepackage{graphicx}
+%Darstellung deutscher Sonderzeichen (Umlaute etc)
+\usepackage[ansinew]{inputenc}
+%Darstellung von URLs
+\usepackage{url}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amstext}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\leftmark}
+\fancyhead[L]{\rightmark}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{15pt}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+
+
+\begin{document}
+\begin{titlepage}
+    \center
+    \begin{flushright}
+			\includegraphics[scale=0.5]{logo.png}\\[1cm]
+		\end{flushright}
+    \huge \textbf{\textsf{Expos\'e zur Bachelor-Thesis}} \\
+    \vspace{2cm}
+    \large\textbf{\textsc{Automatisierung von Abrechnungsprozessen mit BPMN in Bezug auf Crowdcode GmbH \& Co.KG}}\\
+    \vspace{1cm}
+    \normalsize
+		Verfasser: Nooshin Naghavi\\
+		Martikelnummer: 2401101\\
+		\vfill
+		\begin{minipage}{0.9\textwidth}
+    \begin{flushleft}
+     1. Betreuer: Dr. Günter Kniesel\\
+     2. Betreuer: Ingo D\"uppe
+    \end{flushleft}
+    \end{minipage}
+		\vfill
+		\today
+\end{titlepage}
+
+\section{Motivation}
+Um die L\"ucke zwischen Management und IT zu schließen, setzen Unternehmen eine Vielfallt von Werkzeugen und Notationen zur Optimierung von Gesch\"aftsprozessen ein. Die Unternehmen legen dabei großen Wert darauf, ihre Geschäftsabl\"aufe weitesgehend zu automatisieren, weil sie dadurch nicht nur viel Zeit und Kosten sparen können, sondern die Prozesse dadurch auch weniger fehleranfällig sind. Dazu müssen die Gesch\"aftprozesse zun\"achst formal definiert werden um sie dann entsprechend dokumentieren, verstehen, automatisieren und verbessern zu können\newline
+Eine der dazu am h\"aufigsten verwendeten Notationen ist BPMN. Die mit BPMN modellierten Prozessen k\"onnen mit Hilfe von Camunda BPM umgesetzt werden. Camunda ist ein offenes Framework, das in der vorhandenen technischen Umgebung nahtlos eingebettet werden kann. Es erlaubt die Nutzung des Kompletten Java--\"Okosystems f\"ur die Entwicklung von Prozessanwendungen und macht keine Einschr\"ankung hinsichtlich der Verwendung anderer Komponenten und Frameworks (z.B. Spring, Java EE etc.). [1]
+
+\newpage
+
+\section{Zielsetzung und Grenzen}
+
+\subsection{Ausgangssituation}
+
+Das Unternehmen Crowdcode GmbH \& Co.KG ist ein neu gegr\"undetes Unternehmen, das an verschiedenen Projekten arbeitet. Crowdcode wünscht sich seine Abrechnungsprozesse automatisieren zu lassen. Und zwar sollen die monatlichen Rechnungen von Subunternehmen und Dienstleister mit den Zeitdaten abgeglichen werden und die entsprechenden Zahlungen freigegeben werden. Belege m\"ussen an Steuerberater weitergeleitet, verschl\"usselt archiviert und \"uber verschiedene Systeme bereitgestellt werden.  
+
+\subsection{Zielsetzung}
+
+Ziel dieser Arbeit ist die BPMN Prozesse mit Hilfe von Camunda BPM engine zu realisieren. Dabei werden mehrere Werkzeuge eingesetzt. ......
+
+\subsection{Zielgruppe}
+
+Hauptnutzer der Anwendung werden die Mitarbeiter von Crowdcode sein. .....
+
+\subsection{Abgrenzungen}
+
+eine vollständige Analyse, Modellierung und Umsetzung von Abrechnungsprozessen ist im Rahmen dieser Arbeit nicht vorgesehen.
+
+\newpage
+
+\section{Gliederung}
+
+Die Gliederung kann im Laufe der Arbeit ge\"andert werden.
+
+\begin{itemize}
+  \item Eidesstaattliche Erkl\"arung
+  \item Inhaltsverzeichnis
+  \item Abstract
+  \item Einleitung
+      \begin{itemize}
+         \item Motivation und Problemstellung
+         \item Zielsetzung
+				 \item Aufbau der Arbeit 
+      \end{itemize}
+ \item Grundlagen
+			\begin{itemize}
+			   \item BPMN
+				 \item Spring Framework
+				 \item Camunda BPM
+      \end{itemize}
+ \item Prozessdefinition
+ \item Ergebnisse
+			\begin{itemize}
+				\item Modellierung
+				\item Umsetzung
+			\end{itemize}
+  \item Zusammenfassung
+			\begin{itemize}
+				\item Auswertung der Ergebnis
+				\item Vergleich zur alternativen M\"oglichkeiten
+			\end{itemize}
+	 \item Literaturverzeichnis
+	\end{itemize}
+	
+	\newpage
+	
+	\section{Vorgehen}
+	
+	Die Arbeit beinhaltet ...Abschnitte. ZUerst wird... Danach... Zum Schluss
+	
+	
+\begin{thebibliography}{1}
+
+\bibitem[1]{1}
+Camunda, \url{https://camunda.com/}, abgerufen am 27.12.2015.
+
+\end{thebibliography}
+	
+\end{document}
