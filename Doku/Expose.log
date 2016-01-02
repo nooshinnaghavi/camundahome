@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.22)  29 DEC 2015 18:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.22)  2 JAN 2016 19:41
 entering extended mode
 **./Expose.tex
 (Expose.tex
@@ -308,27 +308,30 @@ Overfull \hbox (3.16878pt too wide) in paragraph at lines 52--54
 \OT1/cmr/m/n/10 ei-ne Viel-fallt von Werk-zeu-gen und No-ta-tio-nen zur Op-ti-mie-rung von Gesch[]aftspro-
  []
 
-[2] [3] [4] [5] (Expose.aux)
+[2] [3] [4] [5] [6] (Expose.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 2836 strings out of 493634
- 34368 string characters out of 3141307
- 102119 words of memory out of 3000000
- 6200 multiletter control sequences out of 15000+200000
+ 2835 strings out of 493634
+ 34360 string characters out of 3141307
+ 102116 words of memory out of 3000000
+ 6199 multiletter control sequences out of 15000+200000
  10421 words of font info for 41 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 29i,10n,43p,742b,337s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,10n,43p,588b,337s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
 ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmssbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on Expose.pdf (5 pages, 102063 bytes).
+Output written on Expose.pdf (6 pages, 104606 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
+ 51 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

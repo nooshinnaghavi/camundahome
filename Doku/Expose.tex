@@ -48,7 +48,7 @@
 		\today
 \end{titlepage}
 
-\section{Motivation}
+\section{Motivation (Problemstellung)}
 Um die L\"ucke zwischen Management und IT zu schließen, setzen Unternehmen eine Vielfallt von Werkzeugen und Notationen zur Optimierung von Gesch\"aftsprozessen ein. Die Unternehmen legen dabei großen Wert darauf, ihre Geschäftsabl\"aufe weitesgehend zu automatisieren, weil sie dadurch nicht nur viel Zeit und Kosten sparen können, sondern die Prozesse dadurch auch weniger fehleranfällig sind. Dazu müssen die Gesch\"aftprozesse zun\"achst formal definiert werden um sie dann entsprechend dokumentieren, verstehen, automatisieren und verbessern zu können\newline
 Eine der dazu am h\"aufigsten verwendeten Notationen ist BPMN. Die mit BPMN modellierten Prozessen k\"onnen mit Hilfe von Camunda BPM umgesetzt werden. Camunda ist ein offenes Framework, das in der vorhandenen technischen Umgebung nahtlos eingebettet werden kann. Es erlaubt die Nutzung des Kompletten Java--\"Okosystems f\"ur die Entwicklung von Prozessanwendungen und macht keine Einschr\"ankung hinsichtlich der Verwendung anderer Komponenten und Frameworks (z.B. Spring, Java EE etc.). [1]
 
@@ -58,15 +58,15 @@ Eine der dazu am h\"aufigsten verwendeten Notationen ist BPMN. Die mit BPMN mode
 
 \subsection{Ausgangssituation}
 
-Das Unternehmen Crowdcode GmbH \& Co.KG ist ein neu gegr\"undetes Unternehmen, das an verschiedenen Projekten arbeitet. Crowdcode wünscht sich seine Abrechnungsprozesse automatisieren zu lassen. Und zwar sollen die monatlichen Rechnungen von Subunternehmen und Dienstleister mit den Zeitdaten abgeglichen werden und die entsprechenden Zahlungen freigegeben werden. Belege m\"ussen an Steuerberater weitergeleitet, verschl\"usselt archiviert und \"uber verschiedene Systeme bereitgestellt werden.  
+Das Unternehmen Crowdcode GmbH \& Co. KG ist ein neu gegr\"undetes Unternehmen, das an verschiedenen Projekten arbeitet. Crowdcode wünscht sich seine Abrechnungsprozesse automatisieren zu lassen. Und zwar sollen die monatlichen Rechnungen von Subunternehmen und Dienstleister mit den Zeitdaten abgeglichen werden und die entsprechenden Zahlungen freigegeben werden. Belege m\"ussen an Steuerberater weitergeleitet, verschl\"usselt archiviert und \"uber verschiedene Systeme bereitgestellt werden.  
 
 \subsection{Zielsetzung}
 
-Ziel dieser Arbeit ist die BPMN Prozesse mit Hilfe von Camunda BPM engine zu realisieren. Dabei werden mehrere Werkzeuge eingesetzt. ......
+Ziel dieser Arbeit ist es einen konkreten BPMN Prozess mit Hilfe von Camunda BPM engine zu realisieren. Dabei m\"ochte ich besonderes auf Analyse und Modellierung von Prozessabl\"aufe eingehen.
 
 \subsection{Zielgruppe}
 
-Hauptnutzer der Anwendung werden die Mitarbeiter von Crowdcode sein. .....
+Hauptnutzer der Anwendung werden die Mitarbeiter von Crowdcode sein. 
 
 \subsection{Abgrenzungen}
 
@@ -94,7 +94,7 @@ Die Gliederung kann im Laufe der Arbeit ge\"andert werden.
 				 \item Spring Framework
 				 \item Camunda BPM
       \end{itemize}
- \item Prozessdefinition
+ \item Prozesserfassung
  \item Ergebnisse
 			\begin{itemize}
 				\item Modellierung
@@ -111,9 +111,33 @@ Die Gliederung kann im Laufe der Arbeit ge\"andert werden.
 	
 	\newpage
 	
-	\section{Vorgehen}
+	\section{Grobe Zeitplanung}
 	
-	Die Bachelorarbeit besteht aus vier Abschnitte. Der erste Abschnitt beinhaltet die Einleitung. In der Einleitung werden BPMN, Spring Framework und Camunda BPM kurz vorgestellt und wichtige Grundbegriffe erl\"autert. Der n\"achste Abschnitt besch\"ftigt sich damit, ein Kernprozess erfassen und analysieren.Im dritten Abschnitt geht es um die Modellierung. Dabei wird darauf geachtet, die Modellierung wie m\"oglich simple halten. Danach kommt die Implementierung. Der letzte Abschnitt befasst sich mit einer Auswertung der Ergebnis. Dabei wird einen Vergleich zur alternativen M\"oglichkeiten zur Gestaltung und Umsetzung des Prozesses erstellt. Zum Schluss wird es festgelegt, ob das gew\"unschte Ziele erreicht sind
+	\begin{itemize}
+	  \item am 10.01.16 Abgabe des Expos\'e
+		\item am 15.02.16 Anmeldung zur Bachelorarbeit
+		\item Ende Februar
+		\begin{itemize}
+		  \item Die Gliederung und Inhalte festlegen
+			\item Einleitung ausarbeiten
+			\item Technologien zur Umsetzung finden
+		\end{itemize}
+		\item Mitte M\"arz 
+		\begin{itemize}
+			\item Processerfassung
+			\item Processmodellierung
+			\item Implementierung der Weboberfl\"ache
+		\end{itemize}
+		\item Mitte April ...
+		\item Mitte Mai ...
+		\item Summe Bearbeitungszeiten = ca. X Wochen
+		\item Abgabetermin
+	\end{itemize}
+	
+	\newpage
+	
+	\section{Vorgesehene Quellen}
+	
 	
 \begin{thebibliography}{1}
 
