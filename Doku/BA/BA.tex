@@ -1,0 +1,184 @@
+\documentclass[12pt,twoside]{report}
+\usepackage{datetime}
+
+\parindent0em %no indentation%
+
+%This is for having references being linked to each other
+\usepackage{cite}
+\usepackage[pdftex]{hyperref}
+\usepackage[all]{hypcap}
+
+
+
+\usepackage{color}
+
+
+%Language%
+\usepackage{bibgerm}
+\usepackage[english, ngerman]{babel}
+%\usepackage{rotating} %Rotation of a symbol
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{enumitem}
+
+%Tikz%
+%Graphical%
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning}
+\usepackage{titlesec}
+\definecolor{gray75}{gray}{0.75}
+\usepackage{bbold}
+\usepackage{framed}
+\usepackage{graphicx} %Einbinden von Bildern
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[top=4cm,bottom=4cm,left=3.5cm,right=3.5cm,asymmetric]{geometry}
+\usepackage{fancyhdr}
+\usepackage[toc,page]{appendix}
+\usepackage{afterpage}
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne,  Bjornstrup
+%\usepackage[Glenn]{fncychap}
+\usepackage{filecontents,pgfplots}
+\begin{filecontents}{pistonkinetics.dat}
+	eang    disppos 
+	50		0.37420000
+	100		0.37100000
+	150		0.36990000
+	200		0.369460000
+	250		0.369140000
+	300		0.36893000
+	400		0.36867100
+	500		0.36851220
+	600		0.36840600
+	700		0.36833100
+	800		0.36827480
+	900		0.36823090
+
+	
+\end{filecontents}
+
+%Defining programming language%
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} 
+
+
+
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+
+\clubpenalty = 10000
+\widowpenalty = 1000
+\displaywidowpenalty = 10000
+
+%Remove page number on chapter page.
+\makeatletter
+\let\ps@plain\ps@empty
+\makeatother
+
+\usepackage{nomencl}
+\makenomenclature
+
+
+\clubpenalty = 10000
+\widowpenalty = 10000
+\displaywidowpenalty= 10000
+
+\begin{document}
+\pagenumbering{gobble}
+	\begin{titlepage}
+		\begin{center}
+			 
+			 {\Large Bachelorarbeit}\\
+			 \vspace{0.5cm}
+			 {\normalsize am}\\
+			 \vspace{0.5cm}
+			 {\Large Institut für Informatik}\\
+			 \vspace{0.2cm}
+			 {\Large Rheinische Friedrich-Wilhelms-Universität Bonn}
+			 
+			
+			\vspace{3cm}
+			
+			%\normalsize zum\\
+			%\vspace{2cm}
+			\textbf{\Huge \scshape Die Automatisierung von Abrechnungsprozessen}\\
+			\vspace{0.5cm}
+			%\normalsize von\\
+			%\vspace{0.5cm}
+			{\Large{Seyedeh Nooshin Naghavi Alhosseini}}
+			
+			\vspace{3cm}
+			\Large{\textbf{Gutachter:}}\\
+			\Large{Dr. Günter Kniesel}\\
+			\Large{Dr. }
+			\vspace{3cm}
+			
+			
+			05. Januar 2016
+			
+		\end{center}
+		
+	\end{titlepage}
+	\pagestyle{empty}
+	\clearpage\mbox{}\clearpage
+	\chapter*{Zusammenfassung}
+	
+		In dieser Bachelorarbeit befassen wir uns mit dem \textit{Sekretärsproblem}. Hierbei gilt es, aus einer Menge von Bewerbern einen einzigen Bewerber für die Position des Sekretärs auszuwählen. Erst während des Vorstellungsgesprächs stellt sich die Eignung des Bewerbers für diese Position heraus. Man muss sich vor dem Erscheinen des nächsten Bewerbers für eine Zu- oder Absage des jetzigen Bewerbers entscheiden. Eine getroffene Entscheidung kann nicht mehr revidiert werden.\\ 
+		
+	
+	\pagestyle{empty}
+	\clearpage\mbox{}\clearpage
+	\chapter*{Danksagung}
+	Zunächst möchte ich mich an dieser Stelle bei all denjenigen bedanken, die mich während der Anfertigung dieser Bachelorarbeit unterstützt haben. Hierzu gehören unter anderem Lena Carta, Milad Navidizadeh, Danny Rademacher und Fabian Thorand, die beim Korrekturlesen mit sehr guten Ratschlägen diese Arbeit verbessern konnten.\\
+	
+	Nicht zuletzt möchte ich mich für die tatkräftige Unterstützung meiner Familie, insbesondere der meiner Eltern, bedanken. Sie haben es mir ermöglicht einen akademischen Weg einzuschlagen.
+	
+	\pagestyle{empty}
+	\clearpage\mbox{}\clearpage	
+	
+	\tableofcontents
+	
+	\pagestyle{empty}
+	\clearpage\mbox{}\clearpage
+	
+	% Page style
+	\pagestyle{fancy} %bzw. fancyplain
+	\fancyhead[RE]{\nouppercase\leftmark}
+	\fancyhead[LO]{\nouppercase\rightmark}
+	\fancyhead[LE,RO]{\thepage}
+	\cfoot{}
+	
+	\clearpage
+	\pagenumbering{arabic}
+	\chapter{Einleitung}\label{Chapter: Einleitung}
+	
+	\section{Motivation}
+	Heutzutage stehen wir in vielen alltäglichen Situationen vor Problemen, für die wir kein Wissen über die zukünftige Entwicklung haben, um diese optimal lösen zu können. Daher verfolgt man in diesen Situationen das Ziel das Optimum möglichst gut zu approximieren. 
+
+	
+	
+	\section{Problemstellung}\label{Section: Problemstellung}
+	In dieser Arbeit liegt der Fokus auf 
+
+
+	
+	\section{Beitrag der Arbeit}
+	Diese Arbeit wird sich aus weiteren drei Kapiteln zusammensetzen.	
+	
+
+	
+	\bibliographystyle{plain}
+	
+	
+	
+	\chapter*{Eidesstattliche Erklärung}
+		Hiermit versichere ich an Eides statt und durch meine Unterschrift, dass die vorliegende Arbeit von mir selbständig und ohne fremde Hilfe angefertigt worden ist. Inhalte und Passagen, die aus fremden Quellen stammen und direkt oder indirekt übernommen worden sind, wurden als solche kenntlich gemacht. Ferner versichere ich, dass ich keine andere, außer der im Literaturverzeichnis angegebenen Literatur, verwendet habe. Die Arbeit wurde bisher keiner Prüfungsbehörde vorgelegt und auch noch nicht veröffentlicht.\\
+		\\
+		
+		
+		\line(1,0){250}\\
+		Bonn, den 05.Januar 2016, Nooshin Naghavi 
+\end{document}
