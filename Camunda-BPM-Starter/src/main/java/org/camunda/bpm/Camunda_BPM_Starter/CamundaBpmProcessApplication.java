@@ -16,6 +16,7 @@ public class CamundaBpmProcessApplication extends ServletProcessApplication {
 
   private static final String PROCESS_DEFINITION_KEY = "Camunda-BPM-Starter";
 
+
   /**
    * In a @PostDeploy Hook you can interact with the process engine and access 
    * the processes the application has deployed. 
@@ -25,9 +26,12 @@ public class CamundaBpmProcessApplication extends ServletProcessApplication {
 
     // start an initial process instance
 //    Map<String, Object> variables = new HashMap<String, Object>();
-//    variables.put("name", "John");
-//    
+//    variables.put("firstname", "John");
+//    variables.put("lastname", "Heymann");
 //    processEngine.getRuntimeService().startProcessInstanceByKey(PROCESS_DEFINITION_KEY, variables);
+    
   }
+  
+  
 
 }

@@ -32,7 +32,7 @@
       <property name="deploymentResources" value="classpath*:*.bpmn" />
     </bean>
 
-
+<!-- Configure an Application-Managed Process Engine -->
 <bean id="processEngine" class="org.camunda.bpm.engine.spring.ProcessEngineFactoryBean">
   <property name="processEngineConfiguration" ref="processEngineConfiguration" />
 </bean>
@@ -55,6 +55,7 @@
  <context:annotation-config />
 
  <bean class="org.camunda.bpm.Camunda_BPM_Starter.Starter"/>
- <bean id="calculateService" class="org.camunda.bpm.Camunda_BPM_Starter.CalculateService"/>
+ <bean id="userService" class="org.camunda.bpm.Camunda_BPM_Starter.UserService" />
+ 
                          
 </beans>

@@ -32,7 +32,7 @@
 		\end{flushright}
     \huge \textbf{\textsf{Expos\'e zur Bachelor-Thesis}} \\
     \vspace{2cm}
-    \large\textbf{\textsc{Automatisierung von Abrechnungsprozessen mit BPMN in Bezug auf Crowdcode GmbH \& Co.KG}}\\
+    \large\textbf{\textsc{Gestaltung eines Softwareentwicklungsprozess und exemplarische Durchführung zur    Geschäftsprozessautomatisierung in jungen Unternehmen am Beispiel der Crowdcode GmbH \& Co. KG}}\\
     \vspace{1cm}
     \normalsize
 		Verfasser: Nooshin Naghavi\\
@@ -41,14 +41,14 @@
 		\begin{minipage}{0.9\textwidth}
     \begin{flushleft}
      1. Betreuer: Dr. Günter Kniesel\\
-     2. Betreuer: Ingo D\"uppe
+     2. Betreuer: Ingo Düuppe
     \end{flushleft}
     \end{minipage}
 		\vfill
 		\today
 \end{titlepage}
 
-\section{Motivation (Problemstellung)}
+\section{Motivation}
 Um die L\"ucke zwischen Management und IT zu schließen, setzen Unternehmen eine Vielfallt von Werkzeugen und Notationen zur Optimierung von Gesch\"aftsprozessen ein. Die Unternehmen legen dabei großen Wert darauf, ihre Geschäftsabl\"aufe weitesgehend zu automatisieren, weil sie dadurch nicht nur viel Zeit und Kosten sparen können, sondern die Prozesse dadurch auch weniger fehleranfällig sind. Dazu müssen die Gesch\"aftprozesse zun\"achst formal definiert werden um sie dann entsprechend dokumentieren, verstehen, automatisieren und verbessern zu können\newline
 Eine der dazu am h\"aufigsten verwendeten Notationen ist BPMN. Die mit BPMN modellierten Prozessen k\"onnen mit Hilfe von Camunda BPM umgesetzt werden. Camunda ist ein offenes Framework, das in der vorhandenen technischen Umgebung nahtlos eingebettet werden kann. Es erlaubt die Nutzung des Kompletten Java--\"Okosystems f\"ur die Entwicklung von Prozessanwendungen und macht keine Einschr\"ankung hinsichtlich der Verwendung anderer Komponenten und Frameworks (z.B. Spring, Java EE etc.). [1]
 
@@ -58,19 +58,60 @@ Eine der dazu am h\"aufigsten verwendeten Notationen ist BPMN. Die mit BPMN mode
 
 \subsection{Ausgangssituation}
 
-Das Unternehmen Crowdcode GmbH \& Co. KG ist ein neu gegr\"undetes Unternehmen, das an verschiedenen Projekten arbeitet. Crowdcode wünscht sich seine Abrechnungsprozesse automatisieren zu lassen. Und zwar sollen die monatlichen Rechnungen von Subunternehmen und Dienstleister mit den Zeitdaten abgeglichen werden und die entsprechenden Zahlungen freigegeben werden. Belege m\"ussen an Steuerberater weitergeleitet, verschl\"usselt archiviert und \"uber verschiedene Systeme bereitgestellt werden.  
+Crowdcode GmbH \& Co. KG wurde im September 2014 von Ingo Düppe und Marcus Nörder-­Tuitje gegründet. Crowdcode ist in dem Bereich der Gestaltung und Steuerung von Softwareentwicklungsprozessen sowie der Entwicklung von Unternehmensanwendungen tätig. Spezialisiert hat sich Crowdcode auf Java EE-Technologien. Zurzeit beschäftigt Crowdcode 9 IT-Berater und Softwareentwickler für die Durchführung von Softwareentwicklungsprojekten. Für das weitere Wachstum wurde die strategische Entscheidung getroffen, dass die existierenden und auch zukünftigen Geschäftsprozesse weitestgehend automatisiert werden sollen.\\
+ 
+Crowdcode Geschäftsbereiche sind Beratung und Unterstützung bei der Softwareentwicklung von Unternehmensanwendungen, Schulungen und Coaching, Entwicklung von SaaS (Software as a Service)-Produkten und Open Source Entwicklung. Es werden Informationssysteme sowie Atlassian Confluence (Wiki), Atlassian Jira inkl. Tempo Plug-In (für die Zeitdaten), Atlassian BitBucket / Git, Microsoft Office, Google Docs / Google Hangout, DropBox und Mail zum Einsatz kommen.
+
 
 \subsection{Zielsetzung}
 
-Ziel dieser Arbeit ist es einen konkreten BPMN Prozess mit Hilfe von Camunda BPM engine zu realisieren. Dabei m\"ochte ich besonderes auf Analyse und Modellierung von Prozessabl\"aufe eingehen.
+Ziel der Arbeit ist die prototypische Automatisierung von Geschäftsprozessen mittels einer BPMN-Engine und der Implemetierung verschiedener Microservices. Zudem soll eine Continuous Delivery Pipeline entwickelt werden, mittels derer eine stetige evolutionäre Entwicklung der Geschäftsprozesse und der notwendigen Microservices ermöglicht wird.\\
+
+Im Einzelnen:
+
+\begin{itemize}
+	\item Analyse und Modellierung der Geschäftsprozesse
+	\item Konzeption der Softwarearchitektur
+	\item Konzeption des Softwareentwicklungsprozesses / Continuous Delivery
+	\item Implementierung von einzelnen Microservices zur Unterstützung des Geschäftsprozesses
+\end{itemize}
+  
+Mögliche Geschäftsprozesse kommen aus den Bereichen:
+
+\begin{itemize}
+	\item Fakturierung
+	\item Buchhaltung
+	\item Reisekostenabrechnung
+	\item Monatliche Umsatzsteuermeldung
+	\item Belegmanagement
+	\item Projektreporting
+	\item Belegmanagement
+\end{itemize}
+
+Ein wesentlicher Geschäftsprozess von Crowdcode ist die monatliche Abrechnung gegenüber Kunden und Subunternehmern. In den Projekten werden Zeitdaten von Mitarbeitern und Subunternehmern erfasst, welche die Grundlage der monatlichen Rechnungen für die Kunden darstellen. Neben der Generierung von Projektreports über die geleisteten Arbeiten und deren Aufwand sind die aufgezeichneten Zeitdaten zu aggregieren, manuell zu prüfen und den Kunden als Projektreport automatisch zur Verfügung zu stellen. Gleichfalls sind Zeitdaten mit den Rechnungen der jeweiligen Subunternehmern zu prüfen. Rechnungen der Subunternehmer sollen automatisch per E-Mail oder über einen Microservice eingereicht werden. Rechnungen der Kreditoren sind entsprechend freizugeben und automatisch zum Ende des Zahlungsziel zu bezahlen. \\
+
+Zugleich müssen Reisekosten erfasst, geprüft und freigebene bzw. gegebenenfalls in Rechnung gestellt werden. Sämtliche Zahlungsbelege sollen digitalisiert, archiviert sowie einem Steuerberater zur Verfügugn gestellt werden.
 
 \subsection{Zielgruppe}
 
-Hauptnutzer der Anwendung werden die Mitarbeiter von Crowdcode sein. 
+Hauptnutzer der Anwendung werden folgendes sein:
+
+\begin{itemize}
+	\item Geschäftsführung
+	\item Mitarbeiter
+	\item Subunternehmer / Dienstleister
+	\item Kunden
+	\item Steuerberater
+\end{itemize} 
 
 \subsection{Abgrenzungen}
 
-eine vollständige Analyse, Modellierung und Umsetzung von Abrechnungsprozessen ist im Rahmen dieser Arbeit nicht vorgesehen.
+\begin{itemize}
+	\item In der Arbeit soll zunächst eine grobe Analyse der Kerngeschäftsprozesse, der involvierten Informationssystemen und der organisationsinternen und -externen Nutzergruppen erfolgen.
+	\item Aufbauend auf dieser Analyse werden einzelne Geschäftsprozesse exemplarisch detaillierter analysiert, modelliert und in Teilen implementiert.
+	\item Eine vollständige Analyse, Modellierung und Umsetzung der Geschäftsprozesse ist im Rahmen dieser Arbeit nicht vorgesehen.
+	\item Im Sinne von Continuous Delivery und einer agilen Entwicklung soll frühzeitig ein minimaler Entwicklungsprozess erstellt werden.
+\end{itemize}
 
 \newpage
 
@@ -108,31 +149,6 @@ Die Gliederung kann im Laufe der Arbeit ge\"andert werden.
 			\end{itemize}
 	 \item Literaturverzeichnis
  \end{itemize}
-	
-	\newpage
-	
-	\section{Grobe Zeitplanung}
-	
-	\begin{itemize}
-	  \item am 10.01.16 Abgabe des Expos\'e
-		\item am 15.02.16 Anmeldung zur Bachelorarbeit
-		\item Ende Februar
-		\begin{itemize}
-		  \item Die Gliederung und Inhalte festlegen
-			\item Einleitung ausarbeiten
-			\item Technologien zur Umsetzung finden
-		\end{itemize}
-		\item Mitte M\"arz 
-		\begin{itemize}
-			\item Processerfassung
-			\item Processmodellierung
-			\item Implementierung der Weboberfl\"ache
-		\end{itemize}
-		\item Mitte April ...
-		\item Mitte Mai ...
-		\item Summe Bearbeitungszeiten = ca. X Wochen
-		\item Abgabetermin
-	\end{itemize}
 	
 	\newpage
 	
