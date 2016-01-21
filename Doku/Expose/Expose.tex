@@ -23,6 +23,8 @@
 \setlength{\headheight}{15pt}
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 
+\usepackage[table]{xcolor}
+\usepackage{array,ragged2e}
 
 \begin{document}
 \begin{titlepage}
@@ -41,7 +43,7 @@
 		\begin{minipage}{0.9\textwidth}
     \begin{flushleft}
      1. Betreuer: Dr. Günter Kniesel\\
-     2. Betreuer: Ingo Düuppe
+     2. Betreuer: Ingo Düppe
     \end{flushleft}
     \end{minipage}
 		\vfill
@@ -49,8 +51,22 @@
 \end{titlepage}
 
 \section{Motivation}
-Um die L\"ucke zwischen Management und IT zu schließen, setzen Unternehmen eine Vielfallt von Werkzeugen und Notationen zur Optimierung von Gesch\"aftsprozessen ein. Die Unternehmen legen dabei großen Wert darauf, ihre Geschäftsabl\"aufe weitesgehend zu automatisieren, weil sie dadurch nicht nur viel Zeit und Kosten sparen können, sondern die Prozesse dadurch auch weniger fehleranfällig sind. Dazu müssen die Gesch\"aftprozesse zun\"achst formal definiert werden um sie dann entsprechend dokumentieren, verstehen, automatisieren und verbessern zu können\newline
+Um die L\"ucke zwischen Management und IT zu schließen [1], setzen Unternehmen eine Vielfallt von Werkzeugen und Notationen zur Optimierung von Gesch\"aftsprozessen ein. \\
+
+
+Die Unternehmen legen dabei großen Wert darauf, ihre Geschäftsabl\"aufe weitesgehend zu automatisieren, weil sie dadurch nicht nur viel Zeit und Kosten sparen können, sondern die Prozesse dadurch auch weniger fehleranfällig sind. Dazu müssen die Gesch\"aftprozesse zun\"achst formal definiert werden um sie dann entsprechend dokumentieren, verstehen, automatisieren und verbessern zu können\newline
 Eine der dazu am h\"aufigsten verwendeten Notationen ist BPMN. Die mit BPMN modellierten Prozessen k\"onnen mit Hilfe von Camunda BPM umgesetzt werden. Camunda ist ein offenes Framework, das in der vorhandenen technischen Umgebung nahtlos eingebettet werden kann. Es erlaubt die Nutzung des Kompletten Java--\"Okosystems f\"ur die Entwicklung von Prozessanwendungen und macht keine Einschr\"ankung hinsichtlich der Verwendung anderer Komponenten und Frameworks (z.B. Spring, Java EE etc.). [1]
+
+Business Process Management (BPM) is a structured, coherent, and consistent
+way of understanding, documenting, modeling, analyzing, simulating, executing,
+and continuously changing end-to-end business process and all involved resources
+in light of their contribution to business performance. [2]\\
+
+Business Process Management (BPM) ist eine strukturierte , zusammenhängende und konsistente
+Art des Verstehens , Dokumentation , Modellierung, Analyse , Simulation , Ausführung ,
+und ständig wechselnden End-to -End- Geschäftsprozesse und alle beteiligten Ressourcen
+angesichts ihrer eigenen Beitrag/Mitwirkung zum Geschäftserfolg .
+
 
 \newpage
 
@@ -58,24 +74,12 @@ Eine der dazu am h\"aufigsten verwendeten Notationen ist BPMN. Die mit BPMN mode
 
 \subsection{Ausgangssituation}
 
-Crowdcode GmbH \& Co. KG wurde im September 2014 von Ingo Düppe und Marcus Nörder-­Tuitje gegründet. Crowdcode ist in dem Bereich der Gestaltung und Steuerung von Softwareentwicklungsprozessen sowie der Entwicklung von Unternehmensanwendungen tätig. Spezialisiert hat sich Crowdcode auf Java EE-Technologien. Zurzeit beschäftigt Crowdcode 9 IT-Berater und Softwareentwickler für die Durchführung von Softwareentwicklungsprojekten. Für das weitere Wachstum wurde die strategische Entscheidung getroffen, dass die existierenden und auch zukünftigen Geschäftsprozesse weitestgehend automatisiert werden sollen.\\
- 
-Crowdcode Geschäftsbereiche sind Beratung und Unterstützung bei der Softwareentwicklung von Unternehmensanwendungen, Schulungen und Coaching, Entwicklung von SaaS (Software as a Service)-Produkten und Open Source Entwicklung. Es werden Informationssysteme sowie Atlassian Confluence (Wiki), Atlassian Jira inkl. Tempo Plug-In (für die Zeitdaten), Atlassian BitBucket / Git, Microsoft Office, Google Docs / Google Hangout, DropBox und Mail zum Einsatz kommen.
+Crowdcode GmbH \& Co. KG wurde im September 2014 von Ingo Düppe und Marcus Nörder-­Tuitje gegründet. Crowdcode ist in dem Bereich der Gestaltung und Steuerung von Softwareentwicklungsprozessen sowie der Entwicklung von Unternehmensanwendungen tätig. Spezialisiert hat sich Crowdcode auf Java EE-Technologien. Zurzeit beschäftigt Crowdcode 9 IT-Berater und Softwareentwickler für die Durchführung von Softwareentwicklungsprojekten.\\
 
+Crowdcode Geschäftsbereiche sind Beratung und Unterstützung bei der Softwareentwicklung von Unternehmensanwendungen, Schulungen und Coaching, Entwicklung von SaaS-Produkten und Open Source Entwicklung. Es werden dabei Informationssysteme sowie Atlassian Confluence (Wiki), Atlassian Jira inkl. Tempo Plug-In (für die Zeitdaten), Atlassian BitBucket / Git, Microsoft Office, Google Docs / Google Hangout, DropBox und Mail eingesetzt.\\
 
-\subsection{Zielsetzung}
+Für das weitere Wachstum wurde die strategische Entscheidung getroffen, dass die existierenden und auch zukünftigen Geschäftsprozesse weitestgehend automatisiert werden sollen.\\
 
-Ziel der Arbeit ist die prototypische Automatisierung von Geschäftsprozessen mittels einer BPMN-Engine und der Implemetierung verschiedener Microservices. Zudem soll eine Continuous Delivery Pipeline entwickelt werden, mittels derer eine stetige evolutionäre Entwicklung der Geschäftsprozesse und der notwendigen Microservices ermöglicht wird.\\
-
-Im Einzelnen:
-
-\begin{itemize}
-	\item Analyse und Modellierung der Geschäftsprozesse
-	\item Konzeption der Softwarearchitektur
-	\item Konzeption des Softwareentwicklungsprozesses / Continuous Delivery
-	\item Implementierung von einzelnen Microservices zur Unterstützung des Geschäftsprozesses
-\end{itemize}
-  
 Mögliche Geschäftsprozesse kommen aus den Bereichen:
 
 \begin{itemize}
@@ -91,6 +95,33 @@ Mögliche Geschäftsprozesse kommen aus den Bereichen:
 Ein wesentlicher Geschäftsprozess von Crowdcode ist die monatliche Abrechnung gegenüber Kunden und Subunternehmern. In den Projekten werden Zeitdaten von Mitarbeitern und Subunternehmern erfasst, welche die Grundlage der monatlichen Rechnungen für die Kunden darstellen. Neben der Generierung von Projektreports über die geleisteten Arbeiten und deren Aufwand sind die aufgezeichneten Zeitdaten zu aggregieren, manuell zu prüfen und den Kunden als Projektreport automatisch zur Verfügung zu stellen. Gleichfalls sind Zeitdaten mit den Rechnungen der jeweiligen Subunternehmern zu prüfen. Rechnungen der Subunternehmer sollen automatisch per E-Mail oder über einen Microservice eingereicht werden. Rechnungen der Kreditoren sind entsprechend freizugeben und automatisch zum Ende des Zahlungsziel zu bezahlen. \\
 
 Zugleich müssen Reisekosten erfasst, geprüft und freigebene bzw. gegebenenfalls in Rechnung gestellt werden. Sämtliche Zahlungsbelege sollen digitalisiert, archiviert sowie einem Steuerberater zur Verfügugn gestellt werden.
+
+\subsection{Zielsetzung}
+
+Ziel der Arbeit ist die prototypische Automatisierung von Geschäftsprozessen mittels einer BPMN-Engine und der Implemetierung verschiedener Microservices. Dabei wird besonderes auf Analyse und Modellierung der Geschäftsprozesse eingegangen und der Softwarearchitektur konzeptioniert. Zudem soll eine Continuous Delivery Pipeline entwickelt werden, mittels derer eine stetige evolutionäre Entwicklung der Geschäftsprozesse und der notwendigen Microservices ermöglicht wird.\\
+
+\subsection{Softwarearchitektur}
+
+Für die Umsetzung der Geschäftsprozesse soll eine Microservice-Architektur entwickelt werden.\\
+
+Möglliche Technologien sind:
+\begin{itemize}
+	\item Java Enterprise Edition [4]
+	\item Spring Framework [5]
+	\item Spring Boot [6]
+	\item Spring Cloud [7]
+	\item Camunda BPM Engine [8]
+	\item Google Web Toolkit [9]
+	\item Docker [10]
+\end{itemize}
+
+\subsection{Gestaltung des Entwicklungsprozess}
+
+Der Entwicklungsprozess soll eine Continuous Delivery Pipeline sein.\\
+
+Werkzeugkette:\\
+
+Prozess: Agiler Prozess (Scrum / Kanaban)\\
 
 \subsection{Zielgruppe}
 
@@ -125,26 +156,55 @@ Die Gliederung kann im Laufe der Arbeit ge\"andert werden.
   \item Abstract
   \item Einleitung
       \begin{itemize}
-         \item Motivation und Problemstellung
+			   \item Motivation
+         \item Ausgangssituation
          \item Zielsetzung
 				 \item Aufbau der Arbeit 
       \end{itemize}
- \item Grundlagen
+ \item Analyse und Design der Geschäftsprozesse und Informationssysteme
 			\begin{itemize}
-			   \item BPMN
-				 \item Spring Framework
-				 \item Camunda BPM
+			   \item Beschreibung der Geschäftsprozesse mit BPMN
+				 \item Beschreibung der Informationssysteme
+				 \item Ableitung von Anforderungen für eine Automatisierung
+				 \item Zusammenfassung
       \end{itemize}
- \item Prozesserfassung
- \item Ergebnisse
-			\begin{itemize}
-				\item Modellierung
-				\item Umsetzung
+ \item Konzeption der Softwarearchitektur
+      \begin{itemize}
+				\item Beschreibung der Softwarearchitektur
+				    \begin{itemize}
+							\item Grundlagen von Service- bzw. resourceorientierten Architekturen
+							\item Process Engine, Configuration Server, Monitoring etc.
+						\end{itemize}
+				\item Zusammenfassung
 			\end{itemize}
+ \item Konzeption des Softwareentwicklungsprozess
+			\begin{itemize}
+				\item Beschreibung des verwendeten Technologieportfolios
+				    \begin{itemize}
+							\item Git, Jira, Jenkins, Confluence, BPMN Model, MagicDraw, IntelliJ etc.
+						\end{itemize}
+				\item Beschreibung der Continuous Delivery Pipeline
+				\item Beschreibung der einzelnen Stages (Test, Integration, Akzeptanz, Produktion)
+				     \begin{itemize}
+							 \item Automatisierte Tests (Test Driven Development)
+							 \item Unit Tests
+							 \item Integrationstests
+							 \item Automatische Akzeptanztests (wenn noch Zeit ist)
+						 \end{itemize}
+			\end{itemize}
+	\item Entwicklung ausgewählter Geschäftsprozesse
+	     \begin{itemize}
+				 \item Geschäftsprozessmodelle (Detail)
+				 \item Ableitung von Epics, User Stories.
+				 \item Komponentenmodell
+				 \item Beschreibung der einzelnen Microservices (Schnittstellen, Masken, etc.)
+				 \item Zusammenfassung
+			 \end{itemize}
   \item Diskussion
 			\begin{itemize}
-				\item Auswertung der Ergebnis
-				\item Vergleich zur alternativen M\"oglichkeiten
+				\item Auswertung der Ergebnisse
+				  \subitem Ergebnisse der einzelnen Iterationen
+				  \subitem Impediments der Iterationen
 				\item Fazit
 			\end{itemize}
 	 \item Literaturverzeichnis
@@ -152,13 +212,56 @@ Die Gliederung kann im Laufe der Arbeit ge\"andert werden.
 	
 	\newpage
 	
-	\section{Vorgesehene Quellen}
+	\section{Zeitplanung}
 	
+	Die Arbeit wird in Anlehnung an einem agilen Entwicklungsprozess in 10 Iterationen durchgeführt. Jede Iteration ist zwei Wochen lang und beginnt mit einer Planung des Iterationsziel und der einzelnen Aufgaben, welche hinsichtlich ihrer Priorität sortiert werden. Die Iteration endet mit dem Review der Arbeitsergebnisse und einer Retrospektive. Zur Definition of Done gehört hierbei insbesondere neben der Auslieferung eines funktionsfähigen Prototyps vor allem die zugehörige Ausarbeitung innerhalb der Bachelorarbeit.
+
+\begin{table} [!htb]
+
+\centering
+\begin{tabular}{| m{23pt} | m{220pt}|}\hline
+\multicolumn{1}{c}{\cellcolor{black!30}\textbf{Zeitpunkt}} & 
+  \multicolumn{1}{c}{\cellcolor{black!30}\textbf{Aufgaben und Meilenstein}}\\\hline
+29.01.16 & Abgabe des Expos\'e\\\hline
+         & Beginn der Einarbeitung in relevaneten Technologien \\\hline
+15.03.16 & Anmeldung zur Bachelorarbeit \\\hline
+         & 8 Iterationen (zweiwöchig) \\\hline
+15.07.16 & Beginn der Pufferzone  \\\hline
+         & 2 Iterationen (zweiwöchig) \\\hline
+15.08.16 & Abgabe der Bachelorarbeit \\\hline
+\end{tabular}
+\end{table}
+
+Summe der Bearbeitungszeit: ca. 20 Wochen
+
+\newpage
+
+\section{Literatur}
 	
 \begin{thebibliography}{1}
 
 \bibitem[1]{1}
+IEEE Computer Society, \url{http://www.computer.org/web/chapters/Carlos-Monsalve}, abgerufen am 12.01.15.
+\bibitem[2]{2}
+Recker J, Indulska M, Rosemann M, Green P (2006) How good is BPMN really? Insights
+from theory and practice. 14th European conference on information system (ECIS 2006).
+Gothenburg, pp 1–12.
+\bibitem[3]{3}
 Camunda, \url{https://camunda.com/}, abgerufen am 27.12.2015.
+\bibitem[4]{4}
+Java Enterprise Edition, \url{http://www.oracle.com/technetwork/java/javaee/overview/index.html}, abgerufen am 19.01.2015.
+\bibitem[5]{5}
+Spring Framework, \url{https://projects.spring.io/spring-framework/}, abgerufen am 19.01.2015.
+\bibitem[6]{6}
+Spring Boot, \url{http://projects.spring.io/spring-boot/}, abgerufen am 19.01.2015.
+\bibitem[7]{7}
+Spring Cloud, \url{http://projects.spring.io/spring-cloud/}, abgerufen am 19.01.2015.
+\bibitem[8]{8}
+Camunda BPM Engine, \url{http://camunda.com/}, abgerufen am 19.01.2015.
+\bibitem[9]{9}
+Google Web Toolkit, \url{http://www.gwtproject.org/}, abgerufen am 19.01.2015.
+\bibitem[10]{10}
+Docker, \url{https://www.docker.com/}, abgerufen am 19.01.2015.
 
 \end{thebibliography}
 	
