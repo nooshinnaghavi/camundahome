@@ -52,7 +52,7 @@
 
 \section{Motivation}
 
-Unternehmen setzen eine Vielfallt von Werkzeugen und Notationen zur Modellierung und Optimierung von Geschäftsprozessen ein. Eine von der Standardsprache zur Prozessmodellierung ist BPMN (Business Process Model and Notation) [1], welche zwischenzeitlich von OMG (Object Management Group) übernommen, standardisiert und weiter entwickelt wurde. [2] Denn die Symbolen in BPMN einfach sind, erleichtert sich die Kommunikation zwischen Kunden und IT Fachleute. Dabei können die Anforderungen schneller modelliert werden.\\ 
+Unternehmen setzen eine Vielfallt von Werkzeugen und Notationen zur Modellierung und Optimierung von Geschäftsprozessen ein. Eine von der Standardsprache zur Prozessmodellierung ist BPMN (Business Process Model and Notation) [1], welche zwischenzeitlich von OMG (Object Management Group) übernommen, standardisiert und weiter entwickelt wurde. [2] Denn die Symbolen in BPMN einfach sind, erleichtert sich die Kommunikation zwischen Kunden und IT-Fachleute. Dadurch können die Anforderungen schneller modelliert werden.\\ 
 
 Die von BPMN gestalteten Prozessen können mittels BPMN-Engines ausgeführt werden und Camunda BPM [3] ist eine davon. Im Gegensatz zu klassischen BPM-Suiten ist Camunda ein offenes Framework, das in der vorhandenen technischen Umgebung nahtlos eingebettet werden kann. [4]
 
@@ -64,9 +64,11 @@ Die von BPMN gestalteten Prozessen können mittels BPMN-Engines ausgeführt werden
 
 Crowdcode GmbH \& Co. KG wurde im September 2014 von Ingo Düppe und Marcus Nörder-­Tuitje gegründet. Crowdcode ist in dem Bereich der Gestaltung und Steuerung von Softwareentwicklungsprozessen sowie der Entwicklung von Unternehmensanwendungen tätig. Spezialisiert hat sich Crowdcode auf Java EE-Technologien. Zurzeit beschäftigt Crowdcode 9 IT-Berater und Softwareentwickler für die Durchführung von Softwareentwicklungsprojekten.\\
 
-Crowdcode Geschäftsbereiche sind Beratung und Unterstützung bei der Softwareentwicklung von Unternehmensanwendungen, Schulungen und Coaching, Entwicklung von SaaS-Produkten und Open Source Entwicklung. Es werden dabei Informationssysteme sowie Atlassian Confluence (Wiki), Atlassian Jira inkl. Tempo Plug-In (für die Zeitdaten), Atlassian BitBucket / Git, Microsoft Office, Google Docs / Google Hangout, DropBox und Mail eingesetzt.\\
+Crowdcode Geschäftsbereiche sind Beratung und Unterstützung bei der Softwareentwicklung von Unternehmensanwendungen, Schulungen und Coaching, Entwicklung von SaaS-Produkten und Open Source Entwicklung.\\
 
 Für das weitere Wachstum wurde die strategische Entscheidung getroffen, dass die existierenden und auch zukünftigen Geschäftsprozesse weitestgehend automatisiert werden sollen.\\
+
+\subsection{Geschäftsprozesse}
 
 Mögliche Geschäftsprozesse kommen aus den Bereichen:
 
@@ -94,7 +96,7 @@ Für die Umsetzung der Geschäftsprozesse soll eine Microservice-Architektur entwi
 
 Möglliche Technologien sind:
 \begin{itemize}
-	\item Java Enterprise Edition [4]
+	\item Java Enterprise Edition [5]
 	\item Spring Framework [5]
 	\item Spring Boot [6]
 	\item Spring Cloud [7]
@@ -105,9 +107,9 @@ Möglliche Technologien sind:
 
 \subsection{Gestaltung des Entwicklungsprozess}
 
-Der Entwicklungsprozess soll eine Continuous Delivery Pipeline sein.\\
+Der Entwicklungsprozess soll eine Continuous Delivery Pipeline [11] sein.\\
 
-Werkzeugkette:\\
+Werkzeugkette: - IntelliJ JetBrains - Atlassian BitBucket (Git-Server) - Atlassian Jira (Projektmanagemnet) - Atlassian Confluence (Dokumentaion) - Appache Jenkins (Continuous Integration Server) - SonarQube\\
 
 Prozess: Agiler Prozess (Scrum / Kanaban)\\
 
@@ -251,25 +253,23 @@ OMG (2011): Business Process Model and Notation (BPMN). URL:http://www.omg.org/s
 \bibitem[2]{2}
 Allweyer, Thomas (2015): BPMN 2.0 Einführung in den Standard für die Geschäftsprozessmodellierung, 3. Auflage. Norderstedt, S. 11.
 \bibitem[3]{3}
-Camunda, \url{https://camunda.org/features/engine/}, abgerufen am 22.01.2016.
+Camunda, \url{https://camunda.org/features/engine/}. Stand: 22.01.2016.
 \bibitem[4]{4}
 Camunda the business process company (2015): Camunda BPM im Vergleich mit alternativen. URL:https://network.camunda.org/whitepaper/7. Stand: 22.1.2016.
-\bibitem[]{}
-Camunda, \url{https://camunda.com/}, abgerufen am 27.12.2015.
-\bibitem[]{}
-Java Enterprise Edition, \url{http://www.oracle.com/technetwork/java/javaee/overview/index.html}, abgerufen am 19.01.2015.
 \bibitem[5]{5}
-Spring Framework, \url{https://projects.spring.io/spring-framework/}, abgerufen am 19.01.2015.
+Oracle: Java Platform, Enterprise Edition (Java EE) 7. URL:http://docs.oracle.com/javaee/7/index.html. Stand: 19.01.2016.
 \bibitem[6]{6}
-Spring Boot, \url{http://projects.spring.io/spring-boot/}, abgerufen am 19.01.2015.
+Johnson, Hoeller, Donald, Sampaleanu, Harrop, Risberg, Arendsen, Davison, Kopylenko, Pollack, Templier, Vervaet, Tung, Hale, Colyer, Lewis, Leau, Fisher, Brannen, Laddad, Poutsma, Beams, Abedrabbo, Clement, Syer, Gierke, Stoyanchev, Webb, Winch, Clozel, Nicoll, Deleuze (2004-2015): Spring Framework Reference Documentation. URL:http://docs.spring.io/spring/docs/4.3.0.BUILD-SNAPSHOT/spring-framework-reference/htmlsingle/. Stand: 19.01.2016.
 \bibitem[7]{7}
-Spring Cloud, \url{http://projects.spring.io/spring-cloud/}, abgerufen am 19.01.2015.
+Webb, Syer, Long, Nicoll, Winch, Wilkinson, Overdijk, Dupuis, Deleuze (2013-2016): Spring Boot Reference Guide. URL:http://docs.spring.io/spring-boot/docs/1.3.3.BUILD-SNAPSHOT/reference/htmlsingle/. Stand: 19.01.2016.
 \bibitem[8]{8}
-Camunda BPM Engine, \url{http://camunda.com/}, abgerufen am 19.01.2015.
+Spring Cloud Config. URL:http://cloud.spring.io/spring-cloud-config/spring-cloud-config.html. Stand: 19.01.2016.
 \bibitem[9]{9}
-Google Web Toolkit, \url{http://www.gwtproject.org/}, abgerufen am 19.01.2015.
+Google Web Toolkit (GWT): Developer's GuideURL: http://www.gwtproject.org/doc/latest/DevGuide.html. Stand: 19.01.2016.
 \bibitem[10]{10}
-Docker, \url{https://www.docker.com/}, abgerufen am 19.01.2015.
+Docker: URL: https://docs.docker.com/. Stand: 19.01.2016.
+\bibitem[11]{11}
+Humble, J., Farley, D. (2011): Continuous Delivery. Reliable Software Releases Through Build, Test, and Deployment Automation, Boston.
 
 \end{thebibliography}
 	
