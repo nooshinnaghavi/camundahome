@@ -51,22 +51,10 @@
 \end{titlepage}
 
 \section{Motivation}
-Um die L\"ucke zwischen Management und IT zu schließen [1], setzen Unternehmen eine Vielfallt von Werkzeugen und Notationen zur Optimierung von Gesch\"aftsprozessen ein. \\
 
+Unternehmen setzen eine Vielfallt von Werkzeugen und Notationen zur Modellierung und Optimierung von Geschäftsprozessen ein. Eine von der Standardsprache zur Prozessmodellierung ist BPMN (Business Process Model and Notation) [1], welche zwischenzeitlich von OMG (Object Management Group) übernommen, standardisiert und weiter entwickelt wurde. [2] Denn die Symbolen in BPMN einfach sind, erleichtert sich die Kommunikation zwischen Kunden und IT Fachleute. Dabei können die Anforderungen schneller modelliert werden.\\ 
 
-Die Unternehmen legen dabei großen Wert darauf, ihre Geschäftsabl\"aufe weitesgehend zu automatisieren, weil sie dadurch nicht nur viel Zeit und Kosten sparen können, sondern die Prozesse dadurch auch weniger fehleranfällig sind. Dazu müssen die Gesch\"aftprozesse zun\"achst formal definiert werden um sie dann entsprechend dokumentieren, verstehen, automatisieren und verbessern zu können\newline
-Eine der dazu am h\"aufigsten verwendeten Notationen ist BPMN. Die mit BPMN modellierten Prozessen k\"onnen mit Hilfe von Camunda BPM umgesetzt werden. Camunda ist ein offenes Framework, das in der vorhandenen technischen Umgebung nahtlos eingebettet werden kann. Es erlaubt die Nutzung des Kompletten Java--\"Okosystems f\"ur die Entwicklung von Prozessanwendungen und macht keine Einschr\"ankung hinsichtlich der Verwendung anderer Komponenten und Frameworks (z.B. Spring, Java EE etc.). [1]
-
-Business Process Management (BPM) is a structured, coherent, and consistent
-way of understanding, documenting, modeling, analyzing, simulating, executing,
-and continuously changing end-to-end business process and all involved resources
-in light of their contribution to business performance. [2]\\
-
-Business Process Management (BPM) ist eine strukturierte , zusammenhängende und konsistente
-Art des Verstehens , Dokumentation , Modellierung, Analyse , Simulation , Ausführung ,
-und ständig wechselnden End-to -End- Geschäftsprozesse und alle beteiligten Ressourcen
-angesichts ihrer eigenen Beitrag/Mitwirkung zum Geschäftserfolg .
-
+Die von BPMN gestalteten Prozessen können mittels BPMN-Engines ausgeführt werden und Camunda BPM [3] ist eine davon. Im Gegensatz zu klassischen BPM-Suiten ist Camunda ein offenes Framework, das in der vorhandenen technischen Umgebung nahtlos eingebettet werden kann. [4]
 
 \newpage
 
@@ -259,14 +247,16 @@ Summe der Bearbeitungszeit: ca. 20 Wochen\\
 \begin{thebibliography}{1}
 
 \bibitem[1]{1}
-IEEE Computer Society, \url{http://www.computer.org/web/chapters/Carlos-Monsalve}, abgerufen am 12.01.15.
+OMG (2011): Business Process Model and Notation (BPMN). URL:http://www.omg.org/spec/BPMN/2.0/. Stand: 22.01.2016.
 \bibitem[2]{2}
-Recker J, Indulska M, Rosemann M, Green P (2006) How good is BPMN really? Insights
-from theory and practice. 14th European conference on information system (ECIS 2006).
-Gothenburg, pp 1–12.
+Allweyer, Thomas (2015): BPMN 2.0 Einführung in den Standard für die Geschäftsprozessmodellierung, 3. Auflage. Norderstedt, S. 11.
 \bibitem[3]{3}
-Camunda, \url{https://camunda.com/}, abgerufen am 27.12.2015.
+Camunda, \url{https://camunda.org/features/engine/}, abgerufen am 22.01.2016.
 \bibitem[4]{4}
+Camunda the business process company (2015): Camunda BPM im Vergleich mit alternativen. URL:https://network.camunda.org/whitepaper/7. Stand: 22.1.2016.
+\bibitem[]{}
+Camunda, \url{https://camunda.com/}, abgerufen am 27.12.2015.
+\bibitem[]{}
 Java Enterprise Edition, \url{http://www.oracle.com/technetwork/java/javaee/overview/index.html}, abgerufen am 19.01.2015.
 \bibitem[5]{5}
 Spring Framework, \url{https://projects.spring.io/spring-framework/}, abgerufen am 19.01.2015.
